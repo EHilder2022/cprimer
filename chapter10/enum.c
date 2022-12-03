@@ -17,7 +17,7 @@ int main(int argc, char* argv[]){
 	bool color_is_found = false;
 
 	puts("Enter a color (empty line to quit):");
-	while(s_gets(choice, LEN) != NULL && color[0] != '\0') {
+	while(s_gets(choice, LEN) != NULL && choice[0] != '\0') {
 		for(color = red; color <= violet; color++) {
 			if (strcmp(choice, colors[color]) == 0) {
 				color_is_found = true;
@@ -49,7 +49,7 @@ int main(int argc, char* argv[]){
 }
 char *s_gets(char *st, int n) {
 	char *ret_val;
-	char *st;
+	char *find;
 	
 	ret_val = fgets(st, n, stdin);
 	if (ret_val) {
